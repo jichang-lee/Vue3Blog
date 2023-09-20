@@ -2,6 +2,8 @@ import { createWebHistory, createRouter } from "vue-router";
 import List from './components/BlogList.vue'
 import TextHome from './components/HomeText.vue'
 import BlogDetail from './components/BlogDetail.vue'
+import BlogAuthor from './components/BlogAuthor.vue'
+import BlogCommnet from './components/BlogComment.vue'
 const routes = [
   {
     path: "/list",
@@ -14,6 +16,16 @@ const routes = [
   {
     path : "/list/detail/:id",
     component : BlogDetail,
+    children : [
+      {
+        path: "/author",
+        component: BlogAuthor
+      },
+      {
+        path: "/commnet",
+        component: BlogCommnet 
+      },
+    ]
   }
 ];
 

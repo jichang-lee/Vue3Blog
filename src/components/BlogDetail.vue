@@ -5,6 +5,7 @@
         <h5>{{data[$route.params.id].title}}</h5>
         <p>{{data[$route.params.id].content}}</p>
     </div>
+    <router-view></router-view>
 </template>
 
 <script setup>
